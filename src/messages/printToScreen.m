@@ -27,7 +27,7 @@ function printToScreen(varargin)
 
   if opt.verbosity > 1
 
-    if isOctave()
+    if isOctave() || ~isunix
       fprintf(1, msg);
     else
       try

@@ -180,7 +180,6 @@ function status = subjectHasData(BIDS, opt, subLabel)
   status = true;
 
   filter = fileFilterForGlm(opt, subLabel);
-  filter.task =  opt.taskName;
   fileToProcess = bids.query(BIDS, 'data', filter);
 
   if isempty(fileToProcess)

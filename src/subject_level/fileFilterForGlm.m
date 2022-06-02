@@ -18,13 +18,20 @@ function [filter, opt] = fileFilterForGlm(opt, subLabel)
   opt = mniToIxi(opt);
 
   % task details are passed in opt.query
-  filter = struct('prefix', '', ...
-                  'sub',  regexify(subLabel), ...
-                  'suffix', opt.bidsFilterFile.bold.suffix, ...
-                  'extension', {{'.nii.*'}});
+  filter = opt.bidsFilterFile.bold;
+  filter.prefix =  '';
+  filter.sub =  regexify(subLabel);
+  filter.extension = {'.nii.*'};
 
   % use the extra query options specified in the options
   filter = setFields(filter, opt.query);
   filter = removeEmptyQueryFields(filter);
+  
+  % in case task was not passed through opt.query
+  if ~isfield(filter, 'task')
+    filter.task = opt.taskName;
+  end
 
 end
+
+

@@ -155,8 +155,8 @@ function opt = get_options_from_argument(args)
       opt.bidsFilterFile = args.Results.bids_filter_file;
     end
 
-    if ~isempty(args.Results.fwhm) && ...
-       (~isfield(opt, 'fwhm') || ~isfield(opt.fwhm, 'func') || isempty(opt.fwhm.func))
+    if ~isempty(args.Results.fwhm) % && ...
+       %(~isfield(opt, 'fwhm') || ~isfield(opt.fwhm, 'func') || isempty(opt.fwhm.func))
       opt.fwhm.func = args.Results.fwhm;
     end
 
