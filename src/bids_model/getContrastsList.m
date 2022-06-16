@@ -1,7 +1,7 @@
 function contrastsList = getContrastsList(node, model)
   %
-  % Get list of names of Contrast from this Node or gets its from the
-  % previous Nodes
+  % Get list of names of Contrast from this Node
+  % or gets its from the previous Nodes
   %
   % USAGE::
   %
@@ -13,7 +13,7 @@ function contrastsList = getContrastsList(node, model)
   % :param model:
   % :type model: BIDS stats model object
   %
-  %
+  % :return: contrastsList (cellstr)
   %
   % (C) Copyright 2022 CPP_SPM developers
 

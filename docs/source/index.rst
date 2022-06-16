@@ -15,6 +15,7 @@ Welcome to CPP SPM documentation!
    installation
    bids_app_api
    set_up
+   bids_stats_model
    defaults
    demos
    architecture
@@ -22,6 +23,7 @@ Welcome to CPP SPM documentation!
    fieldmaps
    statistics
    quality_analysis
+   utils
    FAQ
    method_section
    mancoreg
